@@ -5,76 +5,146 @@ HOST: http://polls.apiblueprint.org/
 
 Polls is a simple API allowing consumers to view polls and vote in them.
 
-## User Related [/Users]
 
-### GetUserProfile [GET]
+## User Related [/UserProfile]
+### getUserProfile [GET]
 
-+ Response 200 (application/json)
-
-        [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
-        ]
-
-### Create a New Question [POST]
-
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
+This API is use for to get User Profile on the basis of userid,AuthenticationToken,languageId
 
 + Request (application/json)
 
         {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
+            "userId": 1,
+            "authenticationToken":"58sa36sd214897SA1246er",
+            "languageId": 1
         }
 
-+ Response 201 (application/json)
++ Response 200 (application/json)
 
-    + Headers
-
-            Location: /questions/2
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
+                "Id": "1",
+                "Name": "Niraj Sharma",
+                "Role": "Guest",
+                "Status": "Hiker",
+                "ProfilePercent": 11,
+                "CourcePercent": 22,
+                "TestScorePercent": 33
             }
+            
+## Item Related [/Items]
+### GetItems [GET]
+This API is use for to get all items on the basis of userid,AuthenticationToken,languageId
+
++ Request (application/json)
+
+        {
+            "userId": 1,
+            "authenticationToken":"58sa36sd214897SA1246er",
+            "languageId": 1
+        }
+
++ Response 200 (application/json)
+
+    + Body
+        
+            [
+              {
+                "ItemId": "ItemId1",
+                "ItemGuid": "ItemGuid1",
+                "ItemTitle": "ItemTitle1",
+                "ItemStatus": "ItemStatus1"
+              },
+              {
+                "ItemId": "ItemId2",
+                "ItemGuid": "ItemGuid2",
+                "ItemTitle": "ItemTitle2",
+                "ItemStatus": "ItemStatus2"
+              }
+            ]
+
+## Location Related [/AllLocation]
+### getAllLocation [GET]
+
+This API is use for to get all location on the basis of authenticationToken.
+
++ Request (application/json)
+
+        {
+            "authenticationToken": "58sa36sd214897SA1246er"
+        }
++ Response 200 (application/json)
+
+
+    + Body
+
+            [
+                {
+                "Id": "1",
+                "Name": "US"
+                },
+                {
+                "Id": "2",
+                "Name": "UK"
+                }
+            ]
+
+## Course Related [/Courses]
+### getCourses [GET]
+
+This API is use for to get all courses on the basis of userid,AuthenticationToken,languageId
+
++ Request (application/json)
+
+        {
+            "userId": 1,
+            "AuthenticationToken":"58sa36sd214897SA1246er",
+            "languageId": 1
+        }
++ Response 200 (application/json)
+
+
+    + Body
+    
+            [
+                {
+                    "CourseId": "CourseId",
+                    "CourseGuid": "CourseGuid",
+                    "CourseTitle": "CourseTitle",
+                    "CourseDescription": "CourseDescription"
+                },
+                {
+                    "CourseId": "CourseId",
+                    "CourseGuid": "CourseGuid2",
+                    "CourseTitle": "CourseTitle2",
+                    "CourseDescription": "CourseDescription"
+                }
+            ]           
+        
+## Unit Related [/Unit]
+### getUnit [GET]
+
+This API is use for to get all unit on the basis of userid,AuthenticationToken,languageId
+
++ Request (application/json)
+
+            {
+                "userId": 1,
+                "authenticationToken":"58sa36sd214897SA1246er",
+                "languageId": 1,
+                "type": 1
+            }
++ Response 200 (application/json)
+
+
+    + Body
+    
+            [
+                {
+                    "UnitId": "UnitId",
+                    "UnitGuid": "UnitGuid",
+                    "UnitTitle": "UnitTitle"
+                }
+            ]
