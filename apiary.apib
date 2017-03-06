@@ -1,38 +1,35 @@
 FORMAT: 1A
 HOST: http://polls.apiblueprint.org/
 
-# AmdocsAcademy
+# Academy
 
-User Profile Section 
+Polls is a simple API allowing consumers to view polls and vote in them.
 
-## Questions Collection [/UserProfile]
+## User Related [/Users]
 
-### Load Current User's Profile [GET]
+### GetUserProfile [GET]
 
 + Response 200 (application/json)
 
         [
             {
-                "StatusCode": 200,
-                "StatusMessage": "Success",
-                "Object" : 
-                {
-                "UserID": 1,
-                "UserGuID": "0FA762CD-544E-494A-8706-7491EC8D6431",
-                "LastLoginDate" : "2017-Mar-20",
-                "ProfileImagePath": "data:image/png;base64,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",
-                "CurrentXPPoints" : 100
-                "CurrentLevel" : Hiker
-                }
-            }
-        ]
-+ Response 200 (application/json)
-
-        [
-            {
-                "StatusCode": 900,
-                "StatusMessage": "Error message",
-                "Object" : "NULL"
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 2048
+                    }, {
+                        "choice": "Python",
+                        "votes": 1024
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 512
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 256
+                    }
+                ]
             }
         ]
 
