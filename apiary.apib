@@ -78,21 +78,21 @@ This API is use for to get all items on the basis of userid,AuthenticationToken,
               }
             ]
 
-## Location Related [/AllLocation]
+## Location Related [/AllLocation/{userGuId}/{languageId}]
 ### getAllLocation [GET]
 
 This API is use for to get all location on the basis of authenticationToken.
 
-+ Header ()
-        {
-            "authenticationToken":"58sa36sd214897SA1246er"
-        }
-+ Request (application/json)
++ Request ()
 
-        {
-            "userGuId": "2ds5r53as5r8v65ae78795661",
-            "languageId": 1
-        }
+            + Header (application/json)
+                {
+                    "authenticationToken":"58sa36sd214897SA1246er"
+                }
++ Parameters
+    + userGuId - 2ds5r53as5r8v65ae78795661
+    + languageId - 1
+    
 + Response 200 (application/json)
 
 
@@ -109,21 +109,21 @@ This API is use for to get all location on the basis of authenticationToken.
                 }
             ]
 
-## Track Related [/Track]
+## Track Related [/Track/{userGuId}/{languageId}]
 ### getTrack [GET]
 
 This API is use for to get all Track on the basis of userid,AuthenticationToken,languageId
 
-+ Header ()
-        {
-            "authenticationToken":"58sa36sd214897SA1246er"
-        }
-+ Request (application/json)
++ Request ()
 
-        {
-            "userGuId": "2ds5r53as5r8v65ae78795661",
-            "languageId": 1
-        }
+            + Header (application/json)
+                {
+                    "authenticationToken":"58sa36sd214897SA1246er"
+                }
++ Parameters
+    + userGuId - 2ds5r53as5r8v65ae78795661
+    + languageId - 1
+    
 + Response 200 (application/json)
 
 
@@ -144,22 +144,23 @@ This API is use for to get all Track on the basis of userid,AuthenticationToken,
                 }
             ]           
             
-## Course Related [/Courses]
+## Course Related [/Courses/{userGuId}/{languageId}/{TrackGuId}]
 ### getCourses [GET]
 
 This API is use for to get all courses on the basis of userid,AuthenticationToken,languageId,TrackGuid
 
-+ Header ()
-        {
-            "authenticationToken":"58sa36sd214897SA1246er"
-        }
-+ Request (application/json)
++ Request ()
 
-        {
-            "userGuId": "2ds5r53as5r8v65ae78795661",
-            "languageId": 1,
-            "TrackGuid":"zq45srer54554xaqz21585"
-        }
+            + Header (application/json)
+                {
+                    "authenticationToken":"58sa36sd214897SA1246er"
+                }
++ Parameters
+    + userGuId - 2ds5r53as5r8v65ae78795661
+    + languageId - 1
+    + TrackGuId - zq45srer54554xaqz21585
+
+
 + Response 200 (application/json)
 
 
@@ -180,25 +181,23 @@ This API is use for to get all courses on the basis of userid,AuthenticationToke
                 }
             ]           
         
-## Unit Related [/Unit]
+## Unit Related [/Unit/{userGuId}/{languageId}/{TrackGuId}/{CourseGuid}]
 ### getUnit [GET]
 
 This API is use for to get all unit on the basis of userid,AuthenticationToken,languageId,TrackGuid,CourseGuid
++ Request ()
 
-+ Header ()
-        {
-            "authenticationToken":"58sa36sd214897SA1246er"
-        }
-+ Request (application/json)
+            + Header (application/json)
+                {
+                    "authenticationToken":"58sa36sd214897SA1246er"
+                }
++ Parameters
+    + userGuId - 2ds5r53as5r8v65ae78795661
+    + languageId - 1
+    + TrackGuId - zq45srer54554xaqz21585
+    + CourseGuid - zaaxsa2313216s6fd4s64s
 
-        {
-            "userGuId": "2ds5r53as5r8v65ae78795661",
-            "languageId": 1,
-            "TrackGuid":"zq45srer54554xaqz21585",
-            "CourseGuid":"zaaxsa2313216s6fd4s64s"
-        }
 + Response 200 (application/json)
-
 
     + Body
     
