@@ -44,21 +44,21 @@ This API is use for to get User Profile on the basis of userid,AuthenticationTok
                 "Error": "Error"
             }
             
-## Item Related [/Items]
+## Item Related [/Items/{userGuId}/{languageId}]
 ### GetItems [GET]
 This API is use for to get all items on the basis of userid,AuthenticationToken,languageId
 
-+ Header ()
-        {
-            "authenticationToken":"58sa36sd214897SA1246er"
-        }
-+ Request (application/json)
 
-        {
-            "userGuId": "2ds5r53as5r8v65ae78795661",
-            "languageId": 1
-        }
++ Request ()
 
+            + Header (application/json)
+                {
+                    "authenticationToken":"58sa36sd214897SA1246er"
+                }
++ Parameters
+    + userGuId - 2ds5r53as5r8v65ae78795661
+    + languageId - 1
+            
 + Response 200 (application/json)
 
     + Body
