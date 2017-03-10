@@ -6,7 +6,7 @@ HOST: http://polls.apiblueprint.org/
 Polls is a simple API allowing consumers to view polls and vote in them.
 
 
-## User Related [/UserProfile]
+## User Related [/UserProfile/{userGuId}/{languageId}]
 ### getUserProfile [POST]
 
 This API is use for to get User Profile on the basis of userid,AuthenticationToken,languageId
@@ -19,12 +19,9 @@ This API is use for to get User Profile on the basis of userid,AuthenticationTok
                 "authenticationToken":"58sa36sd214897SA1246er"
             }
 
-        + Body
-            
-            {
-                "userGuId": "2ds5r53as5r8v65ae78795661",
-                "languageId" : 1
-            }
++ Parameters
+    + userGuId - 2ds5r53as5r8v65ae78795661
+    + languageId - 1
                 
 + Response 200 (application/json)
 
