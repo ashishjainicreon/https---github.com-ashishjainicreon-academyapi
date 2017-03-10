@@ -7,12 +7,12 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 
 
 ## User Related [/UserProfile]
-### getUserProfile [Post]
+### getUserProfile [POST]
 
 This API is use for to get User Profile on the basis of userid,AuthenticationToken,languageId
 + Request (application/json)
 
-        + Header 
+        +Header (application/json)
             {   
                 "Content-Type":"application/json",
                 "authenticationToken":"58sa36sd214897SA1246er"
@@ -214,15 +214,18 @@ This API is use for to get all unit on the basis of userid,AuthenticationToken,l
 ### getUnit [GET]
 
 This API is use for to get User Profile Course Completion Percent on the basis of userid,AuthenticationToken,languageId
-+ Request ()
++ Request (application/json)
 
-            + Header (application/json)
-                {
-                    "authenticationToken":"58sa36sd214897SA1246er"
-                }
-+ Parameters
-    + userGuId - 2ds5r53as5r8v65ae78795661
-    + languageId - 1
+        + Header (application/json)
+            {
+                "authenticationToken":"58sa36sd214897SA1246er"
+            }
+        + Body
+            
+            {
+                "userGuId": "2ds5r53as5r8v65ae78795661",
+                "languageId" : 1
+            }
   
 + Response 200 (application/json)
 
@@ -235,19 +238,21 @@ This API is use for to get User Profile Course Completion Percent on the basis o
             ]            
             
 ## Score Related [/UserProfile/ScoreCompleted/{userGuId}/{languageId}]
-### getUnit [GET]
+### getUnit [POST]
 
 This API is use for to get User Profile Score Percent on the basis of userid,AuthenticationToken,languageId
-+ Request ()
++ Request (application/json)
 
-            + Header (application/json)
-                {
-                    "authenticationToken":"58sa36sd214897SA1246er"
-                }
-+ Parameters
-    + userGuId - 2ds5r53as5r8v65ae78795661
-    + languageId - 1
-
+        + Header (application/json)
+            {
+                "authenticationToken":"58sa36sd214897SA1246er"
+            }
+        + Body
+            
+            {
+                "userGuId": "2ds5r53as5r8v65ae78795661",
+                "languageId" : 1
+            }
 + Response 200 (application/json)
 
     + Body
