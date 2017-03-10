@@ -205,3 +205,52 @@ This API is use for to get all unit on the basis of userid,AuthenticationToken,l
                     "UnitTitle": "UnitTitle"
                 }
             ]
+
+
+## Course Related [/UserProfile/CourseCompleted/{userGuId}/{languageId}]
+### getUnit [GET]
+
+This API is use for to get User Profile Course Completion on the basis of userid,AuthenticationToken,languageId
++ Request ()
+
+            + Header (application/json)
+                {
+                    "authenticationToken":"58sa36sd214897SA1246er"
+                }
++ Parameters
+    + userGuId - 2ds5r53as5r8v65ae78795661
+    + languageId - 1
+  
++ Response 200 (application/json)
+
+    + Body
+    
+            [
+                {
+                    "UserProfileCoursePercent": 22
+                }
+            ]            
+            
+## Score Related [/UserProfile/ScoreCompleted/{userGuId}/{languageId}]
+### getUnit [GET]
+
+This API is use for to get User Profile Course Completion on the basis of userid,AuthenticationToken,languageId
++ Request ()
+
+            + Header (application/json)
+                {
+                    "authenticationToken":"58sa36sd214897SA1246er"
+                }
++ Parameters
+    + userGuId - 2ds5r53as5r8v65ae78795661
+    + languageId - 1
+
++ Response 200 (application/json)
+
+    + Body
+    
+            [
+                {
+                    "UserProfileTestScorePercent": 33
+                }
+            ]
