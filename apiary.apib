@@ -185,7 +185,7 @@ This API is use for to get all courses on the basis of userid,AuthenticationToke
                 }
             ]           
         
-## Unit Related [/Unit/{userGuId}/{languageId}/{TrackGuId}/{CourseGuid}]
+## Unit Related [/Unit]
 ### getUnit [GET]
 
 This API is use for to get all unit on the basis of userid,AuthenticationToken,languageId,TrackGuid,CourseGuid
@@ -195,11 +195,15 @@ This API is use for to get all unit on the basis of userid,AuthenticationToken,l
                 {
                     "authenticationToken":"58sa36sd214897SA1246er"
                 }
-+ Parameters
-    + userGuId - 2ds5r53as5r8v65ae78795661
-    + languageId - 1
-    + TrackGuId - zq45srer54554xaqz21585
-    + CourseGuid - zaaxsa2313216s6fd4s64s
+                
+        + body
+            {
+                "userGuId": "2ds5r53as5r8v65ae78795661",
+                "languageId": 1,
+                "trackGuId": "zq45srer54554xaqz21585",
+                "courseGuid":"zaaxsa2313216s6fd4s64s"
+            }
+
 
 + Response 200 (application/json)
 
