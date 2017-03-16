@@ -273,8 +273,8 @@ This API is use for to get User Profile Score Percent on the basis of userid,Aut
             }
             
             
-## Score Related [/userprofile/scorecompleted1]
-### getScorePercent [POST]
+## User Profile Related [/userprofile/itemdetail]
+### getItemDetailbyId [POST]
 
 This API is use for to get User Profile Score Percent on the basis of userid,AuthenticationToken,languageId
 + Request (application/json)
@@ -288,11 +288,17 @@ This API is use for to get User Profile Score Percent on the basis of userid,Aut
             {
                 "userGuId": "2ds5r53as5r8v65ae78795661",
                 "languageId" : 1
+                "TopicItemGuid" : "Topic1GUID"
             }
 + Response 200 (application/json)
 
     + Body
     
             {
-                    "UserProfileTestScorePercent": 33
+                    "TopicItemId": 1,
+                    "TopicItemTitle":"Topic1",
+                    "TopicItemTitle":"Topic1",
+                    "TopicItemVideoUrl":"Topic1TopicItemVideoUrl",
+                    "TopicItemDuration":20,
+                    "TopicItemGuid":"Topic1GUID",
             }
