@@ -357,4 +357,38 @@ This API is use for to get User Profile Score Percent on the basis of userid,Aut
                     "TopicItemId": 1,
                     "TopicItemGuid":"Topic1GUID",
                     "TopicItemIsBookmarked":true
-             }
+             }                    
+                    
+
+## User Profile Related [/userdetails/testItems]
+### gettestItem [POST]
+
+This API is use for to get User Profile Score Percent on the basis of userid,AuthenticationToken,languageId
++ Request (application/json)
+
+        + Header (application/json)
+            {
+                "authenticationToken":"58sa36sd214897SA1246er"
+            }
+        + Body
+            
+            {
+                "userGuId": "2ds5r53as5r8v65ae78795661",
+                "languageId" : 1,
+                "UnitGuId" : "UnitGUID"
+            }
++ Response 200 (application/json)
+
+    + Body
+    
+               [ 
+               {
+                    "TestItemId": 1,
+                    "TestItemGuid":"ItemGuid1",
+                    "TestItemTitle":"API Quiz Contest - Test 1",
+                    "TestItemMaxScore": 200,
+                    "TestItemAttempts":10,
+                    "TestTotalAttempts":25,
+                    "TestItemStatus":1
+                }
+                ]
