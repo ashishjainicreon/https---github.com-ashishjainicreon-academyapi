@@ -6,7 +6,7 @@ HOST: http://polls.apiblueprint.org/
 Polls is a simple API allowing consumers to view polls and vote in them.
 
 
-## User Related [/userprofile]
+## User Profile Related [/userprofile]
 ### getUserProfile [POST]
 
 This API is use for to get User Profile on the basis of userid,AuthenticationToken,languageId
@@ -44,7 +44,7 @@ This API is use for to get User Profile on the basis of userid,AuthenticationTok
                 "Error": "Error"
             }
             
-## Item Related [/item]
+## My Learning Journey Related [/item]
 ### GetItems [POST]
 This API is use for to get all items on the basis of userid,AuthenticationToken,languageId
 
@@ -129,7 +129,7 @@ This API is use for to get all location on the basis of authenticationToken.
                 }
             ]
 
-## Track Related [/track]
+## My Learning Journey Related [/track]
 ### getTrack [POST]
 
 This API is use for to get all Track on the basis of userid,AuthenticationToken,languageId
@@ -166,7 +166,7 @@ This API is use for to get all Track on the basis of userid,AuthenticationToken,
                 }
             ]           
             
-## Course Related [/courses]
+## My Learning Journey Related [/courses]
 ### getCourses [POST]
 
 This API is use for to get all courses on the basis of userid,AuthenticationToken,languageId,TrackGuid
@@ -205,7 +205,7 @@ This API is use for to get all courses on the basis of userid,AuthenticationToke
                 }
             ]           
         
-## Unit Related [/unit]
+## My Learning Journey Related [/unit]
 ### getUnit [POST]
 
 This API is use for to get all unit on the basis of userid,AuthenticationToken,languageId,TrackGuid,CourseGuid
@@ -237,7 +237,7 @@ This API is use for to get all unit on the basis of userid,AuthenticationToken,l
                 }
             ]
 
-## Course Related [/userprofile/coursecompleted]
+## User Profile Course Score Related [/userprofile/coursecompleted]
 ### getCoursePercent [POST]
 
 This API is use for to get User Profile Course Completion Percent on the basis of userid,AuthenticationToken,languageId
@@ -263,7 +263,7 @@ This API is use for to get User Profile Course Completion Percent on the basis o
                     "UserProfileCoursePercent": 22
             }
                         
-## Score Related [/userprofile/scorecompleted]
+## User Profile Track Score Related [/userprofile/scorecompleted]
 ### getScorePercent [POST]
 
 This API is use for to get User Profile Score Percent on the basis of userid,AuthenticationToken,languageId
@@ -288,7 +288,7 @@ This API is use for to get User Profile Score Percent on the basis of userid,Aut
             }
             
             
-## Item detail Related [/userdetails/itemdetail]
+## Right Panel  Related [/userdetails/itemdetail]
 ### getItemDetailbyId [POST]
 
 This API is use for to get item detail  on the basis of userGuId,AuthenticationToken,languageId,TopicItemGuid
@@ -322,7 +322,7 @@ This API is use for to get item detail  on the basis of userGuId,AuthenticationT
             }
             
             
-## Item Rating Related [/userdetails/itemrating]
+## Right Panel  Related [/userdetails/itemrating]
 ### getItemRatingbyId [POST]
 
 This API is use for to get Rating of particaular Item  on the basis of userGuId,AuthenticationToken,languageId,TopicItemGuid
@@ -350,7 +350,7 @@ This API is use for to get Rating of particaular Item  on the basis of userGuId,
                     }
                     
 
-## Item CheckBookmark Related [/userdetails/itemcheckbookmark]
+## Right Panel  Related [/userdetails/itemcheckbookmark]
 ### getItemBookmarkbyId [POST]
 
 This API is use for to check whether item is bookmark or nor on the basis of userGuId,AuthenticationToken,languageId,TopicItemGuid
@@ -412,7 +412,7 @@ This API is use for to get All Test on the basis of UnitId,userGuId,Authenticati
                 ]
                 
                 
-## New LearningItem Related [/newlearning/newlearningitem]
+## Right Panel  Related [/newlearning/newlearningitem]
 ### getnewLearningItem [POST]
 
 This API is use for to get New LearningItem for User on the basis of userGuid,AuthenticationToken,languageId
