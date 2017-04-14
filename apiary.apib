@@ -288,6 +288,47 @@ This API is use for to get User Profile Score Percent on the basis of userid,Aut
                     "UserProfileTestScorePercent": 33
             }
             
+## Save and Get UserProfile after Authentication from AD [/userprofile/saveprofile]
+### saveProfile [POST]
+
+This API is use for to get User Profile Score Percent on the basis of userid,AuthenticationToken,languageId
++ Request (application/json)
+
+        + Header (application/json)
+            {
+                "authenticationToken":"58sa36sd214897SA1246er"
+            }
+        + Body
+            
+            {
+                "EmailAddress": "Sanchit@icreon.com",
+                "UserName": "Sanchit Jindal",
+                "Name": "Sanchit",
+                "Surname": "Jindal",
+                "AccessToken": "58sa36sd214897SA1246er"
+            }
++ Response 200 (application/json)
+
+    + Body
+    
+            {
+                    "UserId":1,
+                    "UserGuid":"2343c587-2b23-4388-a520-a8fc48da4fb2",
+                    "EmailAddress":"Sanchit@icreon.com",
+                    "UserName":"Sanchit.Jindal",
+                    "LoginEmail":"Sanchit@icreon.com",
+                    "JobRoleId":2,
+                    "UserRoleName":"Learner",
+                    "Permissions":["20e7386a-1f46-45d9-938e-e11b1e66e709","c24e64ea-92c6-4d04-8b50-3e9a5d55d449"],
+                    "IsValid":4,
+                    "Name":"Sanchit",
+                    "Surname":"Jindal",
+                    "IsActive":true,
+                    "SystemRole":"Account",
+                    "SystemRoleId":2,
+                    "Status":"Active"
+            }           
+            
             
 ## Right Panel  Related [/userdetails/itemdetail]
 ### getItemDetailbyId [POST]
