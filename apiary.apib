@@ -671,4 +671,35 @@ This API is use for to get lall the achievement of  user
                 {"UserId":1,"UserGuid":"rwrweqeqq","TotalCourse":3,"CompletedCourse":3,"TotalResource":2,"CompletedResource":3,"MinuteSpent":"90m","NoOftest":4,"UserXPEarned":10,"TrackName":"Introduction to Astro Products Track3"},
                 {"UserId":1,"UserGuid":"rwrweqeqq","TotalCourse":4,"CompletedCourse":4,"TotalResource":5,"CompletedResource":5,"MinuteSpent":"50m","NoOftest":1,"UserXPEarned":30,"TrackName":"Introduction to Astro Products Track4"},
                 {"UserId":1,"UserGuid":"rwrweqeqq","TotalCourse":2,"CompletedCourse":2,"TotalResource":1,"CompletedResource":1,"MinuteSpent":"80m","NoOftest":0,"UserXPEarned":50,"TrackName":"Introduction to Astro Products Track5"}
+                ]       
+                
+
+## User profile Details Related [/userprofiledetails/userassignments]
+### userAssignments [POST]
+
+This API is use for to get lall the achievement of  user
+
++ Request ()
+
+            + Header (application/json)
+                {
+                    "authenticationToken":"58sa36sd214897SA1246er"
+                }
+        + body
+            {
+                "userGuId": "2ds5r53as5r8v65ae78795661",
+                "languageId": 1
+            }
+    
++ Response 200 (application/json)
+   
+  
+    + Body
+    
+                [
+                {"UserId":1,"UserGuid":null,"Title":"Certification Exam Attempt 1 - Presenter","CertificateType":"Test","UserXPEarned":0,"IsAssociatedwithTrack":false,"TrackId":0},
+                {"UserId":1,"UserGuid":null,"Title":"Certification Exam Attempt 2 - Presenter","CertificateType":"Test","UserXPEarned":0,"IsAssociatedwithTrack":false,"TrackId":0},
+                {"UserId":1,"UserGuid":null,"Title":"Certification Exam Attempt 3 - Presenter","CertificateType":"Test","UserXPEarned":0,"IsAssociatedwithTrack":false,"TrackId":0},
+                {"UserId":1,"UserGuid":null,"Title":"Certification Exam Attempt 4 - Presenter","CertificateType":"Test","UserXPEarned":0,"IsAssociatedwithTrack":false,"TrackId":0},
+                {"UserId":1,"UserGuid":null,"Title":"Certification Exam Attempt 5 - Presenter","CertificateType":"Test","UserXPEarned":0,"IsAssociatedwithTrack":false,"TrackId":0}
                 ]
