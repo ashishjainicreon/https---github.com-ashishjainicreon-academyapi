@@ -558,3 +558,161 @@ This API is use for to get New LearningItem for User on the basis of userGuid,Au
                     "ItemDuration":45
                 }
                 ]
+                
+
+## User profile Details Related [/userprofiledetails/profiledevelopment]
+### profileDevelopment [POST]
+
+This API is use for to get profile development of user and XP eraned by user
+
++ Request ()
+
+            + Header (application/json)
+                {
+                    "authenticationToken":"58sa36sd214897SA1246er"
+                }
+        + body
+            {
+                "userGuId": "2ds5r53as5r8v65ae78795661",
+                "languageId": 1
+            }
+    
++ Response 200 (application/json)
+   
+  
+    + Body
+    
+                { 
+               "ProfileDev": [{
+                    "ItemId": 1,
+                    "ItemGuid":"ItemGuid1",
+                    "ItemTitle":"API Item Title1",
+                    "ItemStatus": "ItemStatus",
+                    "ItemDescription":"ItemDescription",
+                    "Imagepath":"images/image-1.png",
+                    "ItemDuration":20
+                },{
+                    "ItemId": 1,
+                    "ItemGuid":"ItemGuid1",
+                    "ItemTitle":"API Item Title2",
+                    "ItemStatus": "ItemStatus",
+                    "ItemDescription":"ItemDescription",
+                    "Imagepath":"images/image-2.png",
+                    "ItemDuration":10
+                },{
+                    "ItemId": 1,
+                    "ItemGuid":"ItemGuid1",
+                    "ItemTitle":"API Item Title3",
+                    "ItemStatus": "ItemStatus",
+                    "ItemDescription":"ItemDescription",
+                    "Imagepath":"images/image-1.png",
+                    "ItemDuration":30
+                },{
+                    "ItemId": 1,
+                    "ItemGuid":"ItemGuid1",
+                    "ItemTitle":"API Item Title4",
+                    "ItemStatus": "ItemStatus",
+                    "ItemDescription":"ItemDescription",
+                    "Imagepath":"images/image-2.png",
+                    "ItemDuration":45
+                },{
+                    "ItemId": 1,
+                    "ItemGuid":"ItemGuid1",
+                    "ItemTitle":"API Item Title1",
+                    "ItemStatus": "ItemStatus",
+                    "ItemDescription":"ItemDescription",
+                    "Imagepath":"images/image-1.png",
+                    "ItemDuration":20
+                },{
+                    "ItemId": 1,
+                    "ItemGuid":"ItemGuid1",
+                    "ItemTitle":"API Item Title2",
+                    "ItemStatus": "ItemStatus",
+                    "ItemDescription":"ItemDescription",
+                    "Imagepath":"images/image-2.png",
+                    "ItemDuration":10
+                },{
+                    "ItemId": 1,
+                    "ItemGuid":"ItemGuid1",
+                    "ItemTitle":"API Item Title3",
+                    "ItemStatus": "ItemStatus",
+                    "ItemDescription":"ItemDescription",
+                    "Imagepath":"images/image-1.png",
+                    "ItemDuration":30
+                },{
+                    "ItemId": 1,
+                    "ItemGuid":"ItemGuid1",
+                    "ItemTitle":"API Item Title4",
+                    "ItemStatus": "ItemStatus",
+                    "ItemDescription":"ItemDescription",
+                    "Imagepath":"images/image-2.png",
+                    "ItemDuration":45
+                },{
+                    "ItemId": 1,
+                    "ItemGuid":"ItemGuid1",
+                    "ItemTitle":"API Item Title3",
+                    "ItemStatus": "ItemStatus",
+                    "ItemDescription":"ItemDescription",
+                    "Imagepath":"images/image-1.png",
+                    "ItemDuration":30
+                },{
+                    "ItemId": 1,
+                    "ItemGuid":"ItemGuid1",
+                    "ItemTitle":"API Item Title4",
+                    "ItemStatus": "ItemStatus",
+                    "ItemDescription":"ItemDescription",
+                    "Imagepath":"images/image-2.png",
+                    "ItemDuration":45
+                }]
+                "UserXPLevel": 1600
+                }         
+                  
+
+
+## User profile Details Related [/userprofiledetails/userteamranking]
+### teamRanking [POST]
+
+This API is use for to get all the team member of user with their XP,Role,Level and Image development of user and XP eraned by user
+
++ Request ()
+
+            + Header (application/json)
+                {
+                    "authenticationToken":"58sa36sd214897SA1246er"
+                }
+        + body
+            {
+                "userGuId": "2ds5r53as5r8v65ae78795661",
+                "languageId": 1
+            }
+    
++ Response 200 (application/json)
+   
+  
+    + Body
+    
+                 
+               [ 
+               {
+                    "UserId": 1,
+                    "UserName":"Sanchit Arora",
+                    "UserProfileRole":"Guest",
+                    "UserProfileStatus": "Hiker",
+                    "UserTeamName":"Tester",
+                    "UserProfilePercent":45,
+                    "UserXPEarned":405,
+                    "UserProfileImagePath":"http://localhost:4200/assets/images/newuser.png",
+                },{
+                    "UserId": 1,
+                    "UserName":"Sanchit Arora",
+                    "UserProfileRole":"Account",
+                    "UserProfileStatus": "Beginner",
+                    "UserTeamName":"Tester",
+                    "UserProfilePercent":10,
+                    "UserXPEarned":50,
+                    "UserProfileImagePath":"http://localhost:4200/assets/images/newuser.png",
+                },{"UserId": 1,"UserName": "Sanchit Arora","UserProfileRole": "Guest","UserProfileStatus": "Hiker","UserTeamName": null,"UserProfilePercent": 45,"UserXPEarned": 405,"UserProfileImagePath": "http://localhost:4200/assets/images/newuser.png"},{
+                  {"UserId": 2,"UserName": "Vijay Mallya","UserProfileRole": "Learner","UserProfileStatus": "Toddler","UserTeamName": null,"UserProfilePercent": 35,"UserXPEarned": 300,"UserProfileImagePath": "http://localhost:4200/assets/images/newuser1.png"},
+                  {"UserId": 3,"UserName": "Deepika","UserProfileRole": "TeamLead","UserProfileStatus": "Phoenix","UserTeamName": null,"UserProfilePercent": 75,"UserXPEarned": 650,"UserProfileImagePath": "http://localhost:4200/assets/images/newuser.png"},
+                  {"UserId": 4,"UserName": "Kapil Sharma","UserProfileRole": "Director","UserProfileStatus": "Hiker","UserTeamName": null,"UserProfilePercent": 50,"UserXPEarned": 400,"UserProfileImagePath": "http://localhost:4200/assets/images/newuser.png"}
+                ]
