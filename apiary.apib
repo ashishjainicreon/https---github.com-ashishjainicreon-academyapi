@@ -641,3 +641,34 @@ This API is use for to get all the team member of user with their XP,Role,Level 
                   {"UserId": 3,"UserName": "Deepika","UserProfileRole": "TeamLead","UserProfileStatus": "Phoenix","UserTeamName": null,"UserProfilePercent": 75,"UserXPEarned": 650,"UserProfileImagePath": "http://localhost:4200/assets/images/newuser.png"},
                   {"UserId": 4,"UserName": "Kapil Sharma","UserProfileRole": "Director","UserProfileStatus": "Hiker","UserTeamName": null,"UserProfilePercent": 50,"UserXPEarned": 400,"UserProfileImagePath": "http://localhost:4200/assets/images/newuser.png"}
                 ]
+                
+
+## User profile Details Related [/userprofiledetails/myachievements]
+### userAchievements [POST]
+
+This API is use for to get lall the achievement of  user
+
++ Request ()
+
+            + Header (application/json)
+                {
+                    "authenticationToken":"58sa36sd214897SA1246er"
+                }
+        + body
+            {
+                "userGuId": "2ds5r53as5r8v65ae78795661",
+                "languageId": 1
+            }
+    
++ Response 200 (application/json)
+   
+  
+    + Body
+    
+                [
+                {"UserId":1,"UserGuid":"rwrweqeqq","TotalCourse":2,"CompletedCourse":2,"TotalResource":3,"CompletedResource":3,"MinuteSpent":"30m","NoOftest":0,"UserXPEarned":20,"TrackName":"Introduction to Astro Products Track1"},
+                {"UserId":1,"UserGuid":"rwrweqeqq","TotalCourse":2,"CompletedCourse":2,"TotalResource":4,"CompletedResource":4,"MinuteSpent":"60m","NoOftest":2,"UserXPEarned":30,"TrackName":"Introduction to Astro Products Track2"},
+                {"UserId":1,"UserGuid":"rwrweqeqq","TotalCourse":3,"CompletedCourse":3,"TotalResource":2,"CompletedResource":3,"MinuteSpent":"90m","NoOftest":4,"UserXPEarned":10,"TrackName":"Introduction to Astro Products Track3"},
+                {"UserId":1,"UserGuid":"rwrweqeqq","TotalCourse":4,"CompletedCourse":4,"TotalResource":5,"CompletedResource":5,"MinuteSpent":"50m","NoOftest":1,"UserXPEarned":30,"TrackName":"Introduction to Astro Products Track4"},
+                {"UserId":1,"UserGuid":"rwrweqeqq","TotalCourse":2,"CompletedCourse":2,"TotalResource":1,"CompletedResource":1,"MinuteSpent":"80m","NoOftest":0,"UserXPEarned":50,"TrackName":"Introduction to Astro Products Track5"}
+                ]
